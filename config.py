@@ -40,7 +40,7 @@ class Config:
     tushare_token: Optional[str] = None
     
     # === AI 分析配置 ===
-    gemini_api_key: Optional[str] = None
+    gemini_api_key: Optional[str] = "AIzaSyCjVwp9CwqvRvjfo-9zOHg6Ha3kIGpU1vw"
     gemini_model: str = "gemini-3-flash-preview"  # 主模型
     gemini_model_fallback: str = "gemini-2.5-flash"  # 备选模型
     
@@ -72,9 +72,10 @@ class Config:
     telegram_chat_id: Optional[str] = None  # Chat ID
     
     # 邮件配置（只需邮箱和授权码，SMTP 自动识别）
-    email_sender: Optional[str] = None  # 发件人邮箱
-    email_password: Optional[str] = None  # 邮箱密码/授权码
-    email_receivers: List[str] = field(default_factory=list)  # 收件人列表（留空则发给自己）
+    email_sender: Optional[str] = "zhouzhiguo_2020@163.com"  # 发件人邮箱
+    email_password: Optional[str] = "JSKOWNBNODUXLKEN"  # 邮箱密码/授权码
+    # email_receivers: List[str] = field(default_factory=list)  # 收件人列表（留空则发给自己）
+    email_receivers: List[str] = "617515061@qq.com"  # 收件人列表（留空则发给自己）
     
     # Pushover 配置（手机/桌面推送通知）
     pushover_user_key: Optional[str] = None  # 用户 Key（https://pushover.net 获取）
